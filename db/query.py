@@ -12,7 +12,7 @@ class Query:
             res=client.exec_query(exists_q,conn)
             for i in res:
                 data=i
-            if not res:
+            if not data:
                 return {"message":"username is incorrect!"},False
             id=data['id']
             pswd=data['password']
